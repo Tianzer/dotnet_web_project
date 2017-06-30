@@ -4,14 +4,17 @@
 <div ng-controller="HomeController">
 <form>
     @*<h3>Please select your quote number: </h3>*@
-        <h2>H6 Sales Order Questions </h2>
+        <h2 class="text-primary">H6 Sales Order Questions </h2>
     <div ng-controller="DraftQuotesController">
         <select class="form-control" ng-model="QuoteNum" ng-options="I.QuoteNum for I in QuoteList">
             <option value="">Select Quote Number</option>
         </select>
     </div>
     <hr />
-    <h3>1 &nbsp&nbsp&nbsp&nbsp Pick the Mounting Orientation</h3>
+    @*#######################################################################                
+                                    Q1
+    #######################################################################*@ 
+    <h3 class="text-primary">1 &emsp; Pick the Mounting Orientation</h3>
     <div class=" col-md-offset-1">
         <div class="radio">
             <label>
@@ -32,8 +35,12 @@
             </label>
         </div>
     </div>
-    <h3>2 &nbsp&nbsp&nbsp&nbsp Digital Output</h3>
-            <h4 class=" col-md-offset-1">2.1 &nbsp&nbsp&nbsp&nbsp	Will the digital output be used? </h4>
+    @*#######################################################################
+                                        Q2
+        #######################################################################*@
+    
+    <h3 class="text-primary">2 &emsp; Digital Output</h3>
+            <h4 class=" col-md-offset-1">2.1 &emsp;	Will the digital output be used? </h4>
             <div class="radio-inline col-md-offset-2">
                 <label>
                     <input type="radio" name="q_2.1" id="optionsRadios1" value="option1">
@@ -80,9 +87,13 @@
         </div>
 
     </div>
-        <h3>3 &nbsp&nbsp&nbsp&nbsp Analog Output</h3>
+    @*#######################################################################
+                                        Q3
+        #######################################################################*@
+    
+        <h3 class="text-primary">3 &emsp; Analog Output</h3>
     <h4 class=" col-md-offset-1">
-        3.1	Will the analog output be used <strong>(Default: Yes)</strong> ?
+        3.1 &emsp;	Will the analog output be used <strong>(Default: Yes)</strong> ?
     </h4>
         <div class="radio-inline col-md-offset-2">
             <label>
@@ -98,7 +109,7 @@
         </div>
         <h4 class="col-md-offset-1">If yes, continue. If no, use defaults for all.</h4>
     <h4 class="col-md-offset-1">
-        3.2	Will there be one analog output per axis <strong>(Default: Yes)  </strong> ?
+        3.2 &emsp;	Will there be one analog output per axis <strong>(Default: Yes)  </strong> ?
     </h4>
     <div class="radio-inline col-md-offset-2">
         <label>
@@ -115,7 +126,7 @@
     <h4 class="col-md-offset-1">If yes, Analog Output 1 Axis is X; Analog Output 2 Axis is Y. If no, go to 3.2.1</h4>
 
     <h4 class="col-md-offset-2">
-        3.2.1	Which axis should be associated with Analog Output 1 <strong>(Default: X)</strong> ? 
+        3.2.1 &emsp;	Which axis should be associated with Analog Output 1 <strong>(Default: X)</strong> ? 
     </h4>
     <div class="radio-inline col-md-offset-3">
         <label>
@@ -131,7 +142,7 @@
     </div>
 
     <h4 class="col-md-offset-2">
-        3.2.2	Which axis should be associated with Analog Output 2 <strong>(Default: Y)</strong> ? 
+        3.2.2 &emsp;	Which axis should be associated with Analog Output 2 <strong>(Default: Y)</strong> ? 
     </h4>
     <div class="radio-inline col-md-offset-3">
         <label>
@@ -146,10 +157,43 @@
         </label>
     </div>
 
+    @*#######################################################################
+                                        Q4
+        #######################################################################*@
+    <h3 class="text-primary">4 &emsp; Analog Output 1/2 (x2) </h3>
+    <h4 class="col-md-offset-1">
+        4.1 &emsp;	What Analog Output type is Output 1/2 <strong>(Default: Current)</strong>   ?
+    </h4>
+    <h4 class="col-md-offset-1">
+        4.2 &emsp;	Current Output
+    </h4>
+    <h4 class="col-md-offset-1">
+        4.3 &emsp;	Voltage Output
+    </h4>
+    <h4 class="col-md-offset-1">
+        4.4 &emsp;	Switch Output
+    </h4>
+    <h4 class="col-md-offset-1">
+        4.5 &emsp;	What is the inclination angle that corresponds to the output 1/2 minimum analog value (or lower trip angle)<strong>(±180°; Default: -180°)</strong> ? 
+    </h4>
+    <h4 class="col-md-offset-1">
+        4.6 &emsp;	What is the inclination angle that corresponds to the output 1/2 maximum analog value (or upper trip angle) <strong>(±180°; Default: -180°)</strong>? 
+    </h4>
+    <h4 class="col-md-offset-1">
+        4.7 &emsp;	What is the lower trip angle for output 1/2 <strong>(±180°;  Default: -30°)</strong>?
+    </h4>
+    <h4 class="col-md-offset-1">
+        4.8 &emsp;	What is the upper trip angle for output 1/2 <strong>(±180°; Default: +30°)</strong>?
+    </h4>
+    <h4 class="col-md-offset-1">
+        4.9	&emsp; What is the trip angle for output 1/2 <strong>(±180°; Default: 0°) </strong> ? 
+    </h4>
 
-        <h3>4 &nbsp&nbsp&nbsp&nbsp Analog Output 1/2 (x2) </h3>
-
-        <h3>5 &nbsp&nbsp&nbsp&nbsp Reference Figure for Horizontal Mount, Dual Axis – X-axis</h3>
+    @*#######################################################################
+                                        Q5
+        #######################################################################*@
+    
+        <h3 class="text-primary">5 &emsp; Reference Figure for Horizontal Mount, Dual Axis – X-axis</h3>
 
 
 
