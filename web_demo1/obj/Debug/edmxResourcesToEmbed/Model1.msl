@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MyDatabaseStoreContainer" CdmEntityContainer="Database1Entities">
+    <EntitySetMapping Name="QuoteComponentAttributes">
+      <EntityTypeMapping TypeName="MyDatabase.QuoteComponentAttribute">
+        <MappingFragment StoreEntitySet="QuoteComponentAttributes">
+          <ScalarProperty Name="QuoteComponentAttributeID" ColumnName="QuoteComponentAttributeID" />
+          <ScalarProperty Name="QuoteComponentID" ColumnName="QuoteComponentID" />
+          <ScalarProperty Name="QuoteComponentAttributeCategory" ColumnName="QuoteComponentAttributeCategory" />
+          <ScalarProperty Name="QuoteComponentAttributeType" ColumnName="QuoteComponentAttributeType" />
+          <ScalarProperty Name="QuoteComponentAttribute1" ColumnName="QuoteComponentAttribute" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Quotes">
+      <EntityTypeMapping TypeName="MyDatabase.Quote">
+        <MappingFragment StoreEntitySet="Quotes">
+          <ScalarProperty Name="QuoteNum" ColumnName="QuoteNum" />
+          <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+          <ScalarProperty Name="QuoteStatus" ColumnName="QuoteStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MyDatabase" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="QuoteComponentAttribute">
+    <Key>
+      <PropertyRef Name="QuoteComponentAttributeID" />
+    </Key>
+    <Property Name="QuoteComponentAttributeID" Type="Int32" Nullable="false" />
+    <Property Name="QuoteComponentID" Type="Int32" Nullable="false" />
+    <Property Name="QuoteComponentAttributeCategory" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="QuoteComponentAttributeType" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="QuoteComponentAttribute1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Quote">
+    <Key>
+      <PropertyRef Name="QuoteNum" />
+    </Key>
+    <Property Name="QuoteNum" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Deleted" Type="Boolean" />
+    <Property Name="QuoteStatus" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="Database1Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="QuoteComponentAttributes" EntityType="Self.QuoteComponentAttribute" />
+    <EntitySet Name="Quotes" EntityType="Self.Quote" />
+  </EntityContainer>
+</Schema>

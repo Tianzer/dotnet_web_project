@@ -71,3 +71,7 @@ C:\Users\tbai\Source\Repos\dotnet_web_project\web_demo1\bin\Microsoft.AI.Web.xml
 C:\Users\tbai\Source\Repos\dotnet_web_project\web_demo1\obj\Debug\web_demo1.csprojResolveAssemblyReference.cache
 C:\Users\tbai\Source\Repos\dotnet_web_project\web_demo1\obj\Debug\web_demo1.dll
 C:\Users\tbai\Source\Repos\dotnet_web_project\web_demo1\obj\Debug\web_demo1.pdb
+C:\Users\tbai\Source\Repos\dotnet_web_project\web_demo1\bin\EntityFramework.dll
+C:\Users\tbai\Source\Repos\dotnet_web_project\web_demo1\bin\EntityFramework.SqlServer.dll
+C:\Users\tbai\Source\Repos\dotnet_web_project\web_demo1\bin\EntityFramework.xml
+C:\Users\tbai\Source\Repos\dotnet_web_project\web_demo1\bin\EntityFramework.SqlServer.xml

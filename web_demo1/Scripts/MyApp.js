@@ -4,7 +4,5 @@
     // create a controller
     app.controller('HomeController', function ($scope) { // scope used for share data between view and controller
         $scope.Message = "This is from MyApp ! ";
-
-
     });
 })();

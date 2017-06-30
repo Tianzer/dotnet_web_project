@@ -3,41 +3,38 @@
 }
 <div ng-controller="HomeController">
 <form>
-    <h3>Please select your quote number: </h3>
-    <select class="form-control">
-        <option>1</option>
-        <option>2</option>
-        <option>3</option>
-        <option>4</option>
-        <option>5</option>
-    </select>
-
-    <h2>H6 Sales Order Questions </h2>
+    @*<h3>Please select your quote number: </h3>*@
+        <h2>H6 Sales Order Questions </h2>
+    <div ng-controller="DraftQuotesController">
+        <select class="form-control" ng-model="QuoteNum" ng-options="I.QuoteNum for I in QuoteList">
+            <option value="">Select Quote Number</option>
+        </select>
+    </div>
     <hr />
-    <h4>1 &nbsp&nbsp&nbsp&nbsp Pick the Mounting Orientation</h4>
-
-            <div class="radio">
-                <label>
-                    <input type="radio" name="q_1" id="optionsRadios1" value="option1">
-                    Vertical Mount, Dual Axis
-                </label>
-            </div>
-            <div class="radio">
-                <label>
-                    <input type="radio" name="q_1" id="optionsRadios2" value="option2" checked>
-                    Horizontal Mount, Lid Up, Dual Axis (Default)
-                </label>
-            </div>
-            <div class="radio">
-                <label>
-                    <input type="radio" name="q_1" id="optionsRadios3" value="option3" >
-                    Horizontal Mount, Lid Down, Dual Axis 
-                </label>
-            </div>
-
-    <h4>2 &nbsp&nbsp&nbsp&nbsp Digital Output</h4>
-            <p>2.1 &nbsp&nbsp&nbsp&nbsp	Will the digital output be used? </p>
-            <div class="radio-inline">
+    <h3>1 &nbsp&nbsp&nbsp&nbsp Pick the Mounting Orientation</h3>
+    <div class=" col-md-offset-1">
+        <div class="radio">
+            <label>
+                <input type="radio" name="q_1" id="optionsRadios1" value="option1">
+                Vertical Mount, Dual Axis
+            </label>
+        </div>
+        <div class="radio">
+            <label>
+                <input type="radio" name="q_1" id="optionsRadios2" value="option2" checked>
+                Horizontal Mount, Lid Up, Dual Axis <strong>(Default)</strong> 
+            </label>
+        </div>
+        <div class="radio">
+            <label>
+                <input type="radio" name="q_1" id="optionsRadios3" value="option3">
+                Horizontal Mount, Lid Down, Dual Axis
+            </label>
+        </div>
+    </div>
+    <h3>2 &nbsp&nbsp&nbsp&nbsp Digital Output</h3>
+            <h4 class=" col-md-offset-1">2.1 &nbsp&nbsp&nbsp&nbsp	Will the digital output be used? </h4>
+            <div class="radio-inline col-md-offset-2">
                 <label>
                     <input type="radio" name="q_2.1" id="optionsRadios1" value="option1">
                     Yes
@@ -45,48 +42,49 @@
             </div>
             <div class="radio-inline ">
                 <label>
-                    <input type="radio" name="q_2.1" id="optionsRadios2" value="option2">
+                    <input type="radio" name="q_2.1" id="optionsRadios2" value="option2" checked>
                     No
                 </label>
             </div>
-            <p>If No, use default. If Yes, which digital output will be used?  </p>
-            <div class="radio">
-                <label>
-                    <input type="radio" name="q_2.1_" id="optionsRadios1" value="option1" checked>
-                    RS-485, 125,000 baud rate (Default)
-                </label>
-            </div>
-            <div class="radio">
-                <label>
-                    <input type="radio" name="q_2.1_" id="optionsRadios1" value="option1" >
-                    RS-485, 250,000 baud rate
-                </label>
-            </div>
-            <div class="radio">
-                <label>
-                    <input type="radio" name="q_2.1_" id="optionsRadios1" value="option1" >
-                    CANOpen (FUTURE, not available) 
-                </label>
-            </div>
-            <div class="radio">
-                <label>
-                    <input type="radio" name="q_2.1_" id="optionsRadios1" value="option1" >
-                    J1939 (Prototype) 
-                </label>
-            </div>
-            <div class="radio">
-                <label>
-                    <input type="radio" name="q_2.1_" id="optionsRadios1" value="option1" >
-                    RS-485, 62,500 baud rate
-                </label>
-            </div>
-            
+            <h4 class="col-md-offset-1">If No, use default. If Yes, which digital output will be used?  </h4>
+    <div class="col-md-offset-2">
+        <div class="radio">
+            <label>
+                <input type="radio" name="q_2.1_" id="optionsRadios1" value="option1" checked>
+                RS-485, 125,000 baud rate <strong>(Default)</strong> 
+            </label>
+        </div>
+        <div class="radio">
+            <label>
+                <input type="radio" name="q_2.1_" id="optionsRadios1" value="option1">
+                RS-485, 250,000 baud rate
+            </label>
+        </div>
+        <div class="radio">
+            <label>
+                <input type="radio" name="q_2.1_" id="optionsRadios1" value="option1">
+                CANOpen (FUTURE, not available)
+            </label>
+        </div>
+        <div class="radio">
+            <label>
+                <input type="radio" name="q_2.1_" id="optionsRadios1" value="option1">
+                J1939 (Prototype)
+            </label>
+        </div>
+        <div class="radio">
+            <label>
+                <input type="radio" name="q_2.1_" id="optionsRadios1" value="option1">
+                RS-485, 62,500 baud rate
+            </label>
+        </div>
 
-        <h4>3 &nbsp&nbsp&nbsp&nbsp Analog Output</h4>
-    <p>
-        3.1	Will the analog output be used (Default: Yes)?
-    </p>
-        <div class="radio-inline">
+    </div>
+        <h3>3 &nbsp&nbsp&nbsp&nbsp Analog Output</h3>
+    <h4 class=" col-md-offset-1">
+        3.1	Will the analog output be used <strong>(Default: Yes)</strong> ?
+    </h4>
+        <div class="radio-inline col-md-offset-2">
             <label>
                 <input type="radio" name="q_3.1" id="optionsRadios1" value="option1" checked>
                 Yes
@@ -98,11 +96,11 @@
                 No
             </label>
         </div>
-        <p>If yes, continue. If no, use defaults for all.</p>
-    <p>
-        3.2	Will there be one analog output per axis (Default: Yes)? 
-    </p>
-    <div class="radio-inline">
+        <h4 class="col-md-offset-1">If yes, continue. If no, use defaults for all.</h4>
+    <h4 class="col-md-offset-1">
+        3.2	Will there be one analog output per axis <strong>(Default: Yes)  </strong> ?
+    </h4>
+    <div class="radio-inline col-md-offset-2">
         <label>
             <input type="radio" name="q_3.2" id="optionsRadios1" value="option1" checked>
             Yes
@@ -114,44 +112,44 @@
             No
         </label>
     </div>
-    <p>If yes, Analog Output 1 Axis is X; Analog Output 2 Axis is Y. If no, go to 3.2.1</p>
+    <h4 class="col-md-offset-1">If yes, Analog Output 1 Axis is X; Analog Output 2 Axis is Y. If no, go to 3.2.1</h4>
 
-    <p>
-        3.2.1	Which axis should be associated with Analog Output 1 (Default: X)? 
-    </p>
-    <div class="radio-inline">
+    <h4 class="col-md-offset-2">
+        3.2.1	Which axis should be associated with Analog Output 1 <strong>(Default: X)</strong> ? 
+    </h4>
+    <div class="radio-inline col-md-offset-3">
         <label>
             <input type="radio" name="q_3.2.1" id="optionsRadios1" value="option1" checked>
-            Yes
+            X
         </label>
     </div>
     <div class="radio-inline ">
         <label>
             <input type="radio" name="q_3.2.1" id="optionsRadios2" value="option2">
-            No
+            Y
         </label>
     </div>
 
-    <p>
-        3.2.2	Which axis should be associated with Analog Output 2 (Default: Y)? 
-    </p>
-    <div class="radio-inline">
+    <h4 class="col-md-offset-2">
+        3.2.2	Which axis should be associated with Analog Output 2 <strong>(Default: Y)</strong> ? 
+    </h4>
+    <div class="radio-inline col-md-offset-3">
         <label>
-            <input type="radio" name="q_3.2.2" id="optionsRadios1" value="option1" checked>
-            Yes
+            <input type="radio" name="q_3.2.2" id="optionsRadios1" value="option1" >
+            X
         </label>
     </div>
     <div class="radio-inline ">
         <label>
-            <input type="radio" name="q_3.2.2" id="optionsRadios2" value="option2">
-            No
+            <input type="radio" name="q_3.2.2" id="optionsRadios2" value="option2" checked>
+            Y
         </label>
     </div>
 
 
-        <h4>4 &nbsp&nbsp&nbsp&nbsp Analog Output 1/2 (x2) </h4>
+        <h3>4 &nbsp&nbsp&nbsp&nbsp Analog Output 1/2 (x2) </h3>
 
-        <h4>5 &nbsp&nbsp&nbsp&nbsp Reference Figure for Horizontal Mount, Dual Axis – X-axis</h4>
+        <h3>5 &nbsp&nbsp&nbsp&nbsp Reference Figure for Horizontal Mount, Dual Axis – X-axis</h3>
 
 
 
@@ -161,3 +159,6 @@
     </form>
 
 </div>
+@section scripts{   
+<script src="~/Scripts/AngularController/DraftQuotesController.js"></script>
+    }
