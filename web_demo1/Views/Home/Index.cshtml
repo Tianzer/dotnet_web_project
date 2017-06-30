@@ -1,31 +1,163 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
+<div ng-controller="HomeController">
+<form>
+    <h3>Please select your quote number: </h3>
+    <select class="form-control">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+    </select>
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
+    <h2>H6 Sales Order Questions </h2>
+    <hr />
+    <h4>1 &nbsp&nbsp&nbsp&nbsp Pick the Mounting Orientation</h4>
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+            <div class="radio">
+                <label>
+                    <input type="radio" name="q_1" id="optionsRadios1" value="option1">
+                    Vertical Mount, Dual Axis
+                </label>
+            </div>
+            <div class="radio">
+                <label>
+                    <input type="radio" name="q_1" id="optionsRadios2" value="option2" checked>
+                    Horizontal Mount, Lid Up, Dual Axis (Default)
+                </label>
+            </div>
+            <div class="radio">
+                <label>
+                    <input type="radio" name="q_1" id="optionsRadios3" value="option3" >
+                    Horizontal Mount, Lid Down, Dual Axis 
+                </label>
+            </div>
+
+    <h4>2 &nbsp&nbsp&nbsp&nbsp Digital Output</h4>
+            <p>2.1 &nbsp&nbsp&nbsp&nbsp	Will the digital output be used? </p>
+            <div class="radio-inline">
+                <label>
+                    <input type="radio" name="q_2.1" id="optionsRadios1" value="option1">
+                    Yes
+                </label>
+            </div>
+            <div class="radio-inline ">
+                <label>
+                    <input type="radio" name="q_2.1" id="optionsRadios2" value="option2">
+                    No
+                </label>
+            </div>
+            <p>If No, use default. If Yes, which digital output will be used?  </p>
+            <div class="radio">
+                <label>
+                    <input type="radio" name="q_2.1_" id="optionsRadios1" value="option1" checked>
+                    RS-485, 125,000 baud rate (Default)
+                </label>
+            </div>
+            <div class="radio">
+                <label>
+                    <input type="radio" name="q_2.1_" id="optionsRadios1" value="option1" >
+                    RS-485, 250,000 baud rate
+                </label>
+            </div>
+            <div class="radio">
+                <label>
+                    <input type="radio" name="q_2.1_" id="optionsRadios1" value="option1" >
+                    CANOpen (FUTURE, not available) 
+                </label>
+            </div>
+            <div class="radio">
+                <label>
+                    <input type="radio" name="q_2.1_" id="optionsRadios1" value="option1" >
+                    J1939 (Prototype) 
+                </label>
+            </div>
+            <div class="radio">
+                <label>
+                    <input type="radio" name="q_2.1_" id="optionsRadios1" value="option1" >
+                    RS-485, 62,500 baud rate
+                </label>
+            </div>
+            
+
+        <h4>3 &nbsp&nbsp&nbsp&nbsp Analog Output</h4>
+    <p>
+        3.1	Will the analog output be used (Default: Yes)?
+    </p>
+        <div class="radio-inline">
+            <label>
+                <input type="radio" name="q_3.1" id="optionsRadios1" value="option1" checked>
+                Yes
+            </label>
+        </div>
+        <div class="radio-inline ">
+            <label>
+                <input type="radio" name="q_3.1" id="optionsRadios2" value="option2">
+                No
+            </label>
+        </div>
+        <p>If yes, continue. If no, use defaults for all.</p>
+    <p>
+        3.2	Will there be one analog output per axis (Default: Yes)? 
+    </p>
+    <div class="radio-inline">
+        <label>
+            <input type="radio" name="q_3.2" id="optionsRadios1" value="option1" checked>
+            Yes
+        </label>
     </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+    <div class="radio-inline ">
+        <label>
+            <input type="radio" name="q_3.2" id="optionsRadios2" value="option2">
+            No
+        </label>
     </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+    <p>If yes, Analog Output 1 Axis is X; Analog Output 2 Axis is Y. If no, go to 3.2.1</p>
+
+    <p>
+        3.2.1	Which axis should be associated with Analog Output 1 (Default: X)? 
+    </p>
+    <div class="radio-inline">
+        <label>
+            <input type="radio" name="q_3.2.1" id="optionsRadios1" value="option1" checked>
+            Yes
+        </label>
     </div>
+    <div class="radio-inline ">
+        <label>
+            <input type="radio" name="q_3.2.1" id="optionsRadios2" value="option2">
+            No
+        </label>
+    </div>
+
+    <p>
+        3.2.2	Which axis should be associated with Analog Output 2 (Default: Y)? 
+    </p>
+    <div class="radio-inline">
+        <label>
+            <input type="radio" name="q_3.2.2" id="optionsRadios1" value="option1" checked>
+            Yes
+        </label>
+    </div>
+    <div class="radio-inline ">
+        <label>
+            <input type="radio" name="q_3.2.2" id="optionsRadios2" value="option2">
+            No
+        </label>
+    </div>
+
+
+        <h4>4 &nbsp&nbsp&nbsp&nbsp Analog Output 1/2 (x2) </h4>
+
+        <h4>5 &nbsp&nbsp&nbsp&nbsp Reference Figure for Horizontal Mount, Dual Axis – X-axis</h4>
+
+
+
+
+        {{Message}}
+
+    </form>
+
 </div>
